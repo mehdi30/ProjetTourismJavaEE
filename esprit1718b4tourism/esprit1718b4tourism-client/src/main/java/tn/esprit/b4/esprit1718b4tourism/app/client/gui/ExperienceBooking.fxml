@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b4.esprit1718b4tourism.app.client.gui.ExperienceBController">
+   <children>
+      <VBox fx:id="box" prefHeight="671.0" prefWidth="235.0">
+         <children>
+            <Label prefHeight="172.0" prefWidth="235.0" text="               Menu" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <JFXButton prefHeight="45.0" prefWidth="237.0" text="Hotels Management" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="48.0" prefWidth="237.0" text="Experience Management" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="event" prefHeight="51.0" prefWidth="238.0" text="Events Management" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="46.0" prefWidth="239.0" text="Articles Management" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="38.0" prefWidth="239.0" text="Restautants Management" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="message" prefHeight="49.0" prefWidth="240.0" text="Messages" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <HBox prefHeight="51.0" prefWidth="235.0">
+               <children>
+                  <JFXButton fx:id="notifBtn" onAction="#notifications" prefHeight="49.0" prefWidth="187.0" text="  Notifications" textFill="#b0b6c6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="image" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../../../../../../../../../JEE/EasyMissionProject/clienEasyMission/src/main/java/img/notification-icon-63261.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label fx:id="number" prefHeight="48.0" prefWidth="28.0" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <JFXButton fx:id="jobOffer" prefHeight="52.0" prefWidth="236.0" text="Products Management" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="logOut" prefHeight="36.0" prefWidth="240.0" text="Log Out" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Pane prefHeight="663.0" prefWidth="1000.0">
+         <children>
+            <ImageView fx:id="imgv" fitHeight="663.0" fitWidth="1000.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/background.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="exp1" fitHeight="236.0" fitWidth="470.0" layoutX="515.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <image>
+                  <Image url="@../img/exp2.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="exp2" fitHeight="236.0" fitWidth="912.0" layoutX="94.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/exp1.PNG" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <JFXTextField fx:id="search" layoutX="77.0" layoutY="8.0" maxWidth="312.0" minWidth="312.0" onKeyTyped="#Search" prefHeight="45.0" prefWidth="312.0" promptText="Search" unFocusColor="#b2d01a">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="forumBox" layoutX="718.0" layoutY="21.0" prefHeight="25.0" prefWidth="133.0" promptText="Category" />
+            <JFXComboBox fx:id="sortCategory" layoutX="412.0" layoutY="18.0" onAction="#sortByCategory" prefHeight="25.0" prefWidth="127.0" promptText="Sort By" />
+            <JFXComboBox fx:id="sortByCommentsNumb" layoutX="558.0" layoutY="18.0" onAction="#sortByCommentsNumber" prefHeight="25.0" prefWidth="127.0" promptText="Sort By" />
+            <JFXButton fx:id="goToStat" layoutX="846.0" layoutY="460.0" onAction="#goToStats" prefHeight="37.0" prefWidth="141.0" style="-fx-background-color: #16518c;" text="My Bookings" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect></JFXButton>
+            <Label fx:id="errorCom" layoutX="237.0" layoutY="625.0" prefHeight="38.0" prefWidth="432.0" textFill="#eb0707">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="70.0" layoutY="101.0" prefHeight="222.0" prefWidth="428.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <TableView fx:id="tableView" layoutX="11.0" layoutY="31.0" onMouseClicked="#get" prefHeight="164.0" prefWidth="404.0">
+                    <columns>
+                      <TableColumn fx:id="ColumnName" prefWidth="268.6666564941406" text="Name" />
+                      <TableColumn fx:id="ColumnLocation" minWidth="3.999969482421875" prefWidth="136.33334350585938" text="Location" />
+                    </columns>
+                  </TableView>
+                  <Text layoutX="31.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discover our experiences" textAlignment="CENTER" wrappingWidth="242.99999568611383">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="BookExperience" layoutX="846.0" layoutY="509.0" onAction="#BookExperience" prefHeight="38.0" prefWidth="141.0" style="-fx-background-color: #ff8c8c;" text="My List" textFill="#edeff2">
+               <effect>
+                  <DropShadow />
+               </effect></JFXButton>
+            <AnchorPane fx:id="anchoor2" layoutX="544.0" layoutY="72.0" prefHeight="315.0" prefWidth="445.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Text fx:id="price" fill="#ff0404" layoutX="285.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="58.00001281499863">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="name" layoutX="9.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="403.9999933540821">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#757171" layoutX="344.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="per person" textAlignment="CENTER" wrappingWidth="72.03741455078125">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Rating fx:id="ratingbaa" layoutX="15.0" layoutY="262.0" prefHeight="32.0" prefWidth="191.0" />
+                  <ImageView fx:id="Dislike" fitHeight="190.0" fitWidth="290.0" layoutX="21.0" layoutY="51.0" onMouseClicked="#Dislike" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../img/Dislike1.PNG" />
+                     </image></ImageView>
+                  <ImageView fx:id="Like" fitHeight="190.0" fitWidth="292.0" layoutX="22.0" layoutY="52.0" onMouseClicked="#Like" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../img/like1.PNG" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="nbAvis" fill="#ff8c8c" layoutX="191.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="45.00001281499863">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="terry" fitHeight="78.0" fitWidth="104.0" layoutX="329.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/profill.PNG" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="name1" layoutX="313.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proposed by : Terry" wrappingWidth="133.00000057788566">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="mehdi" fitHeight="94.0" fitWidth="84.0" layoutX="329.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/mehdi.PNG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchoor3" layoutX="420.0" layoutY="414.0" prefHeight="233.0" prefWidth="411.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Text layoutX="21.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" wrappingWidth="113.7890625">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="description" fontSmoothingType="LCD" layoutX="21.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="369.9999895244837">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchoor1" layoutX="77.0" layoutY="357.0" prefHeight="259.0" prefWidth="282.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <GridPane layoutX="33.0" layoutY="14.0" prefHeight="233.0" prefWidth="219.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="62.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="136.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text fx:id="location" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="155.99998952448368" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="duration" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="157.6708984375" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="date" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="158.0000165104866" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="starTime" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="66.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/time2%20(1).jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="60.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@../img/time2%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="58.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@../img/tim.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="57.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@../img/calender.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="Create" layoutX="844.0" layoutY="562.0" onAction="#Create" prefHeight="37.0" prefWidth="141.0" style="-fx-background-color: #16518c;" text="Create Experience" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <AnchorPane fx:id="anchoor31" layoutX="15.0" layoutY="623.0" prefHeight="36.0" prefWidth="396.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Text fx:id="description1" fontSmoothingType="LCD" layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="369.9999895244837">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+      <JFXHamburger fx:id="hamburger" layoutX="949.0" layoutY="24.0" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="400.0" focusTraversable="true" prefHeight="671.0" prefWidth="246.0">
+         <children>
+            <Label fx:id="forumOwner" prefHeight="25.0" prefWidth="173.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children></JFXDrawer>
+   </children>
+</AnchorPane>

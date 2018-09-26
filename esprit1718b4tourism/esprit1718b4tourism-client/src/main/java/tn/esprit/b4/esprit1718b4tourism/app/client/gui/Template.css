@@ -1,0 +1,46 @@
+.mainFxmlClass {
+
+    
+}
+
+.gradient{
+    -fx-background-color: linear-gradient( from 50% 0% to 50% 100%,#31445A,#298DC5);
+}
+
+.menus{
+    -fx-background-color: rgb(49, 68, 90,0.6);    
+}
+
+.menus:hover{
+    -fx-background-color: rgb(49, 68, 90,0.8);
+}
+
+.menus:pressed{
+    -fx-background-color: rgb(19, 19, 55);
+}
+
+#button1{
+  -fx-background-color: #3c7fb1, linear-gradient(#fafdfe, #e8f5fc),
+        linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-padding: 3 30 3 30;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 180px;
+}
+
+#button1:hover{
+    -fx-background-color: rgb(49, 68, 90,0.8);
+}
+
+#button1:pressed{
+    -fx-background-color: rgb(19, 19, 55);
+}
+
+#text_input
+{
+    -fx-prompt-text-fill: white;
+    -fx-text-fill: white;
+}

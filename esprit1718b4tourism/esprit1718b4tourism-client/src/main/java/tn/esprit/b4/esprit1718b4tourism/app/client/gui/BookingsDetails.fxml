@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b4.esprit1718b4tourism.app.client.gui.DetailsExperienceController">
+   <children>
+      <Pane prefHeight="663.0" prefWidth="1000.0">
+         <children>
+            <ImageView fx:id="imgv" fitHeight="663.0" fitWidth="1000.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/background.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="107.0" layoutY="21.0" prefHeight="625.0" prefWidth="766.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <AnchorPane layoutX="82.0" layoutY="44.0" prefHeight="89.0" prefWidth="621.0" style="-fx-background-color: #cd5f5f;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Text fx:id="name" fill="#432b2b" layoutX="208.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experience" textAlignment="CENTER" wrappingWidth="404.71484375">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="149.0" fitWidth="125.0" layoutX="122.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Circle-Profile.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="36.0" layoutY="218.0" prefHeight="346.0" prefWidth="694.0" style="-fx-background-color: #ffff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <AnchorPane layoutX="11.0" layoutY="19.0" prefHeight="236.0" prefWidth="277.0" style="-fx-background-color: #ffff;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <GridPane layoutX="33.0" layoutY="14.0" prefHeight="233.0" prefWidth="219.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="62.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="136.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text fx:id="locationn" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="155.99998952448368" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="duration" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="157.6708984375" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="starTime" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="date" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="66.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/time2%20(1).jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="60.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                       <image>
+                                          <Image url="@../img/time2%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="58.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                                       <image>
+                                          <Image url="@../img/tim.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="57.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                                       <image>
+                                          <Image url="@../img/calender.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="400.0" layoutY="167.0" prefHeight="196.0" prefWidth="267.0" style="-fx-background-color: #ffff;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <ImageView fitHeight="147.0" fitWidth="191.0" layoutX="34.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                        <Text fx:id="price" layoutX="167.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Label fx:id="errorCom" layoutX="237.0" layoutY="625.0" prefHeight="38.0" prefWidth="432.0" textFill="#eb0707">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="452.0" layoutY="413.0" prefHeight="215.0" prefWidth="405.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Text layoutX="21.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" wrappingWidth="113.7890625">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="description" fontSmoothingType="LCD" layoutX="21.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="369.9999895244837">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+      <JFXHamburger fx:id="hamburger" layoutX="949.0" layoutY="24.0" />
+      <ImageView fx:id="retour" fitHeight="85.0" fitWidth="58.0" layoutX="20.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/retour.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

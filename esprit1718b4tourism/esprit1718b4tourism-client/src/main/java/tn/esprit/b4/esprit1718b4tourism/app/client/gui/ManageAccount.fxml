@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1000.0" styleClass="gradient" stylesheets="@Template.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b4.esprit1718b4tourism.app.client.gui.ManageAccountController">
+   <children>
+      <Pane prefHeight="749.0" prefWidth="999.0">
+         <children>
+            <ImageView fx:id="imgv" fitHeight="750.0" fitWidth="1000.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../../../git/esprit1718b4tourism/esprit1718b4tourism/esprit1718b4tourism-client/src/main/java/tn/esprit/b4/esprit1718b4tourism/app/client/img/background.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="back" layoutX="730.0" layoutY="627.0" onMouseReleased="#back_click" prefHeight="61.0" prefWidth="269.0" styleClass="menus">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="17.0" prefHeight="26.0" prefWidth="84.0" text="Back" textAlignment="CENTER" textFill="#e2d2d2">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               </AnchorPane>
+         </children>
+      </Pane>
+      <Pane layoutX="-17.0" layoutY="2.0" prefHeight="623.0" prefWidth="1014.0">
+         <children>
+            <HBox layoutY="-1.0" prefHeight="622.0" prefWidth="1014.0">
+               <children>
+                  <Pane prefHeight="622.0" prefWidth="496.0">
+                     <children>
+                        <GridPane layoutX="84.0" layoutY="62.0" prefHeight="373.0" prefWidth="374.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.6000213623047" minWidth="10.0" prefWidth="182.2000274658203" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.13330078125" minWidth="10.0" prefWidth="239.7999725341797" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="55.46667327880859" minHeight="10.0" prefHeight="53.333334350585936" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="58.933325195312506" minHeight="10.0" prefHeight="46.39999694824219" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="61.06667175292969" minHeight="10.0" prefHeight="61.06667175292969" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="72.8" minHeight="10.0" prefHeight="38.133328247070324" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="72.79999389648438" minHeight="10.0" prefHeight="34.399987792968744" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="55.19998779296873" minHeight="10.0" prefHeight="32.00001220703126" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="52.60001220703123" minHeight="10.0" prefHeight="41.59998779296873" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="first name" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label text="last name" textFill="WHITE" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label text="birthday" textFill="WHITE" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label text="email" textFill="WHITE" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label text="phone number" textFill="WHITE" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label text="OrientMember" textFill="WHITE" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="first_name" prefHeight="18.0" prefWidth="182.0" text="Label" textFill="WHITE" GridPane.columnIndex="1" />
+                              <Label fx:id="last_name" prefHeight="18.0" prefWidth="203.0" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="birthday" prefHeight="18.0" prefWidth="234.0" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="email" prefHeight="18.0" prefWidth="233.0" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="phone" prefHeight="18.0" prefWidth="191.0" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Premium access" textFill="WHITE" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <JFXCheckBox fx:id="orient" disable="true" text=" " GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <JFXCheckBox fx:id="premium" disable="true" text=" " GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                           </children>
+                        </GridPane>
+                        <HBox layoutX="102.0" layoutY="462.0" prefHeight="90.0" prefWidth="360.0">
+                           <children>
+                              <JFXButton id="button1" fx:id="edit_button" onAction="#edit_button_action" prefHeight="46.0" prefWidth="103.0" stylesheets="@Template.css" text="Edit">
+                                 <HBox.margin>
+                                    <Insets right="50.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton id="button1" fx:id="delete_button" onAction="#delete_button_action" prefHeight="53.0" prefWidth="95.0" stylesheets="@Template.css" text="Delete account" />
+                           </children>
+                        </HBox>
+                     </children></Pane>
+                  <Pane fx:id="Pane3" prefHeight="855.0" prefWidth="457.0">
+                     <children>
+                        <GridPane layoutX="35.0" layoutY="70.0" prefHeight="327.0" prefWidth="408.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.19993591308594" minWidth="10.0" prefWidth="163.46671142578126" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.99999999999997" minWidth="10.0" prefWidth="222.93328857421872" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="new first name">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label text="new last name" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label text="new birthday" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label text="new phone number" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label text="password" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <JFXTextField fx:id="first_name_edit" promptText="first name here" GridPane.columnIndex="1" />
+                              <JFXTextField fx:id="last_name_edit" promptText="last name here" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <JFXTextField fx:id="phone_edit" promptText="phone number here" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <JFXDatePicker fx:id="birthday_edit" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <JFXPasswordField fx:id="password_edit1" promptText="type password here" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <JFXPasswordField fx:id="password_edit2" promptText="retype password here" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                        <HBox layoutX="93.0" layoutY="462.0" prefHeight="77.0" prefWidth="374.0" stylesheets="@Template.css">
+                           <children>
+                              <JFXButton id="button1" fx:id="cancel_button" onAction="#cancel_button_action" prefHeight="54.0" prefWidth="152.0" stylesheets="@Template.css" text="Cancel">
+                                 <padding>
+                                    <Insets right="50.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets right="50.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton id="button1" fx:id="save_button" onAction="#save_button_action" prefHeight="62.0" prefWidth="158.0" stylesheets="@Template.css" text="Save changes" />
+                          
+                           </children>
+                        </HBox>
+                     </children></Pane>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+    <ImageView fx:id="my_image" fitHeight="73.0" fitWidth="98.0" layoutX="356.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="edit_image" fitHeight="80.0" fitWidth="116.0" layoutX="717.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="select_image" layoutX="919.0" layoutY="26.0" mnemonicParsing="false" onAction="#select_image_action" text="Button" />
+            <Label fx:id="pathLabel" layoutX="405.0" layoutY="17.0" prefHeight="17.0" prefWidth="309.0" text="Label" />
+</AnchorPane>

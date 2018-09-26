@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h:form>
+
+	
+
+	<h:panelGrid columns="2">
+		<h:outputText value="Name" />
+		<h:inputText value="#{experienceBean.name}" />
+
+		<h:outputText value="Location" />
+		<h:selectOneMenu value="#{experienceBean.location}">
+			<f:selectItem itemLabel="Tokyo" itemValue="Tokyo" />
+			<f:selectItem itemLabel="Paris" itemValue="Paris" />
+			<f:selectItem itemLabel="Ottawa" itemValue="Ottawa" />
+			<f:selectItem itemLabel="Oslo" itemValue="Oslo" />
+
+		</h:selectOneMenu>
+
+		<h:outputText value="Duration" />
+		<h:inputText value="#{experienceBean.duration}" />
+
+		<h:outputText value="Price" />
+		<h:inputText value="#{experienceBean.price}" />
+
+		<h:outputText value="Places" />
+		<h:inputText value="#{experienceBean.nbplaces}" />
+
+		<h:outputText value="Start Time" />
+		<h:inputText value="#{experienceBean.starTime}" />
+
+		<h:outputText value="Description" />
+		<h:inputText value="#{experienceBean.description}" />
+
+		<h:outputText value="Date" />
+		<h:inputText id="datExperience"
+			value="#{experienceBean.datExperience}">
+			<f:convertDateTime pattern="dd-MM-yyyy" />
+		</h:inputText>
+
+
+
+		<h:commandButton action="#{experienceBean.addExperience()}"
+			value="Create" />
+		<h:commandButton action="#{experienceBean.editExperience()}"
+			value="Update" />
+
+	</h:panelGrid>
+	
+	<h:dataTable value="#{experienceBean.experiences}" var="experience"
+		border="1">
+
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Name" />
+			</f:facet>
+			<h:outputText value="#{experience.name}" />
+
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Location" />
+			</f:facet>
+			<h:outputText value="#{experience.location}" />
+
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Price" />
+			</f:facet>
+			<h:outputText value="#{experience.price}" />
+
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="Action" />
+			</f:facet>
+			<h:commandButton action="#{experienceBean.deleteExp(experience.id)}"
+				value="Delete" />
+			<h:commandButton
+				action="#{experienceBean.modifierExperience(experience)}"
+				value="Edit" />
+
+		</h:column>
+
+
+
+
+	</h:dataTable>
+</h:form>
+
+</html>

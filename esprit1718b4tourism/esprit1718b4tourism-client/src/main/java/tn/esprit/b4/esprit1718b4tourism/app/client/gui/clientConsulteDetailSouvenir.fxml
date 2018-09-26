@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b4.esprit1718b4tourism.app.client.gui.clientConsulteDetailSouvenirController">
+   <children>
+      <Pane layoutX="3.0" layoutY="-7.0" prefHeight="586.0" prefWidth="996.0">
+         <children>
+            <ImageView fitHeight="628.0" fitWidth="1045.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/azuz/Desktop/events/back.jpg" />
+               </image>
+            </ImageView>
+         
+            
+         
+            <JFXTextField fx:id="description" disable="true" layoutX="312.0" layoutY="169.0" promptText="Description" unFocusColor="#64ae19">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="category" disable="true" layoutX="312.0" layoutY="225.0" promptText="Adresse" text="category" unFocusColor="#64ae19">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></JFXTextField>
+            
+            <JFXTextField fx:id="titre" disable="true" focusColor="#0639f2" layoutX="310.0" layoutY="102.0" promptText="Title" unFocusColor="#78e107">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+           
+                
+            <Label fx:id="erreur" layoutX="545.0" layoutY="612.0" prefHeight="17.0" prefWidth="149.0" textFill="#da1010">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="quantity" disable="true" layoutX="312.0" layoutY="284.0" promptText="Number of places" unFocusColor="#64ae19">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="price" disable="true" layoutX="312.0" layoutY="339.0" promptText="Price" unFocusColor="#64ae19">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nom" disable="true" layoutX="336.0" layoutY="20.0" prefHeight="37.0" prefWidth="352.0">
+               <font>
+                  <Font size="17.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="back" layoutX="25.0" layoutY="26.0" onAction="#retour" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #eb057c;" text="Back" textFill="#1e0000" />
+            <Label layoutX="130.0" layoutY="115.0" prefHeight="21.0" prefWidth="115.0" text="Souvenir Name" textFill="#eb057c">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="288.0" prefHeight="17.0" prefWidth="80.0" text="Quantity" textFill="#eb057c">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="229.0" prefHeight="17.0" prefWidth="80.0" text="Category" textFill="#eb057c">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="176.0" prefHeight="21.0" prefWidth="122.0" text="Event Description" textFill="#eb057c">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="343.0" prefHeight="17.0" prefWidth="80.0" text="Price" textFill="#eb057c">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="694.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/azuz/Desktop/booking.JPG" />
+               </image></ImageView>
+            <JFXButton fx:id="Book" layoutX="210.0" layoutY="462.0" onAction="#Book" style="-fx-background-color: #eb057c;" text="Book here" textFill="#f5f0f0" />
+            <JFXTextField fx:id="quantityRes" layoutX="316.0" layoutY="462.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="5.0" layoutY="400.0" pickOnBounds="true">
+               <image>
+                  <Image url="file:/C:/Users/azuz/Desktop/booking.JPG" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="reservation" layoutX="782.0" layoutY="42.0" onAction="#reservationhaha" ripplerFill="#d3e3ff" style="-fx-background-color: #eb057c;" text="My Reservations" textFill="#dae7ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Text fx:id="totalprice" layoutX="375.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="150.79575982689857">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Label layoutX="217.0" layoutY="517.0" prefHeight="17.0" prefWidth="129.0" text="You should Pay" textFill="#e41f5d">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+     
+   </children>
+</AnchorPane>

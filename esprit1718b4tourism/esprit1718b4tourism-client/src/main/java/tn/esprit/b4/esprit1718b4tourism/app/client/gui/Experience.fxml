@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b4.esprit1718b4tourism.app.client.gui.ExperienceController">
+   <children>
+      <VBox fx:id="box" prefHeight="671.0" prefWidth="235.0">
+         <children>
+            <Label prefHeight="172.0" prefWidth="235.0" text="            Menu" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <JFXButton prefHeight="45.0" prefWidth="237.0" text="Hotels" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#experienceb" prefHeight="48.0" prefWidth="237.0" text="Experience" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="event" prefHeight="51.0" prefWidth="238.0" text="Events " textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="46.0" prefWidth="239.0" text="Articles " textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="38.0" prefWidth="239.0" text="Restautants " textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="message" prefHeight="49.0" prefWidth="240.0" text="Messages" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <HBox prefHeight="51.0" prefWidth="235.0">
+               <children>
+                  <JFXButton fx:id="notifBtn" onAction="#notifications" prefHeight="49.0" prefWidth="187.0" text=" Notifications" textFill="#b0b6c6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="image" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../../../../../../../../../JEE/EasyMissionProject/clienEasyMission/src/main/java/img/notification-icon-63261.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label fx:id="number" prefHeight="48.0" prefWidth="28.0" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <JFXButton fx:id="logOut" prefHeight="36.0" prefWidth="240.0" text="Log Out" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="jobOffer" prefHeight="52.0" prefWidth="236.0" text="Products" textFill="#b0b6c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Pane prefHeight="663.0" prefWidth="1000.0">
+         <children>
+            <ImageView fx:id="imgv" fitHeight="663.0" fitWidth="1000.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/background.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="searchForum" layoutX="77.0" layoutY="8.0" maxWidth="312.0" minWidth="312.0" onKeyTyped="#Search" prefHeight="45.0" prefWidth="312.0" promptText="Search" unFocusColor="#b2d01a">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="forumBox" layoutX="744.0" layoutY="41.0" prefHeight="25.0" prefWidth="133.0" promptText="Category" />
+            <JFXComboBox fx:id="sortCategory" layoutX="412.0" layoutY="18.0" onAction="#sortByCategory" prefHeight="25.0" prefWidth="127.0" promptText="Sort By" />
+            <JFXComboBox fx:id="sortByCommentsNumb" layoutX="558.0" layoutY="18.0" onAction="#sortByCommentsNumber" prefHeight="25.0" prefWidth="127.0" promptText="Sort By" />
+            <JFXButton fx:id="goToStat" layoutX="838.0" layoutY="599.0" onAction="#goToStats" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: #16518c;" text="Advanced Statistics" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect></JFXButton>
+            <Label fx:id="errorCom" layoutX="237.0" layoutY="625.0" prefHeight="38.0" prefWidth="432.0" textFill="#eb0707">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView" layoutX="48.0" layoutY="98.0" prefHeight="172.0" prefWidth="812.0">
+              <columns>
+                <TableColumn fx:id="ColumnName" prefWidth="156.0" text="Name" />
+                <TableColumn fx:id="ColumnLocation" minWidth="3.999969482421875" prefWidth="75.0" text="Location" />
+                  <TableColumn fx:id="ColumnPrice" minWidth="0.0" prefWidth="55.0" text="Price" />
+                  <TableColumn fx:id="ColumnDate" prefWidth="86.0" text="Date" />
+                  <TableColumn fx:id="ColumnDuration" minWidth="2.0" prefWidth="62.0" text="Duration" />
+                  <TableColumn fx:id="ColumnTime" prefWidth="56.0" text="Time" />
+                  <TableColumn fx:id="ColumnDescription" prefWidth="196.0" text="Description" />
+                  <TableColumn fx:id="parts" prefWidth="68.0" text="Paticipants" />
+                  <TableColumn fx:id="availablee" prefWidth="57.0" text="Available" />
+              </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TableView>
+            <JFXTextArea fx:id="description" layoutX="540.0" layoutY="423.0" prefHeight="149.0" prefWidth="289.0" promptText="Add Description" unFocusColor="#dae819">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </JFXTextArea>
+            <JFXTextField fx:id="starTime" layoutX="186.0" layoutY="610.0" maxWidth="383.0" minWidth="231.0" prefHeight="39.0" prefWidth="281.0" promptText="Start Time" unFocusColor="#dae819">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXTextField>
+            <JFXTextField fx:id="duration" layoutX="186.0" layoutY="481.0" maxWidth="529.0" minWidth="258.0" prefHeight="39.0" prefWidth="281.0" promptText="Duration" unFocusColor="#dada09">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXTextField>
+            <JFXTextField fx:id="location" layoutX="186.0" layoutY="417.0" maxWidth="380.0" minWidth="269.0" prefHeight="39.0" prefWidth="281.0" promptText="Location" unFocusColor="#dae819">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXTextField>
+            <JFXTextField fx:id="price" layoutX="186.0" layoutY="547.0" maxWidth="381.0" minWidth="266.0" prefHeight="39.0" prefWidth="281.0" promptText="Price" unFocusColor="#dae819">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXTextField>
+            <JFXTextField fx:id="name" layoutX="186.0" layoutY="350.0" maxWidth="377.0" minWidth="171.0" prefHeight="39.0" prefWidth="281.0" promptText="Name" unFocusColor="#dae819">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXTextField>
+            <JFXButton fx:id="AddExperience" layoutX="319.0" layoutY="292.0" onAction="#AddExperience" prefHeight="41.0" prefWidth="140.0" style="-fx-background-color: #16518c;" text="Create Experience" textFill="#edeff2">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="UpdateForumm" layoutX="476.0" layoutY="292.0" onAction="#UpdateExperience" prefHeight="41.0" prefWidth="140.0" style="-fx-background-color: #16518c;" text="Update Experience" textFill="#edeff2">
+               <effect>
+                  <DropShadow />
+               </effect></JFXButton>
+            <JFXButton fx:id="DeleteExperience" layoutX="635.0" layoutY="293.0" onAction="#DeleteExperience" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: #c22525;" text="    Delete Experience" textFill="#edeff2">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <ImageView fx:id="poubelle" fitHeight="20.0" fitWidth="21.0" layoutX="641.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/poubelle.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="available" layoutX="544.0" layoutY="350.0" maxWidth="381.0" minWidth="266.0" prefHeight="39.0" prefWidth="281.0" promptText="Number of places" unFocusColor="#dae819">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fx:id="name11" fitHeight="79.0" fitWidth="95.0" layoutX="887.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/profill.PNG" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Text fx:id="name1" layoutX="878.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terry" textAlignment="CENTER" wrappingWidth="113.75001377984881">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Text>
+            <JFXDatePicker fx:id="dateExperience" layoutX="816.0" layoutY="299.0" prefHeight="25.0" prefWidth="156.0" />
+         </children>
+      </Pane>
+      <JFXHamburger fx:id="hamburger" layoutX="949.0" layoutY="24.0" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="400.0" focusTraversable="true" prefHeight="671.0" prefWidth="246.0">
+         <children>
+            <Label fx:id="forumOwner" prefHeight="25.0" prefWidth="173.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children></JFXDrawer>
+   </children>
+</AnchorPane>

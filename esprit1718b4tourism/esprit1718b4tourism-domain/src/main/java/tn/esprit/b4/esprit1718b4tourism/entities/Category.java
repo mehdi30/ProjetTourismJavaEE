@@ -1,0 +1,5 @@
+package tn.esprit.b4.esprit1718b4tourism.entities;
+
+public enum Category {
+experience,restaurant,hotel,event
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b4.esprit1718b4tourism.app.client.gui.ExperienceValidationController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="1000.0">
+         <children>
+            <ImageView fx:id="imgv" fitHeight="650.0" fitWidth="1000.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/background.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="retour" fitHeight="64.0" fitWidth="54.0" layoutX="35.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/retour.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="anchor1" layoutX="263.0" layoutY="167.0" prefHeight="272.0" prefWidth="476.0" style="-fx-background-color: #ffff;">
+               <children>
+                  <ProgressIndicator fx:id="progressIndi1" layoutX="185.0" layoutY="66.0" prefHeight="106.0" prefWidth="126.0" progress="0.0" />
+                  <Text fx:id="totalprice2" fill="#ff4800" layoutX="68.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="326.24999061226845">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor0" layoutX="261.0" layoutY="163.0" prefHeight="390.0" prefWidth="478.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <JFXButton fx:id="bookvalidaion" layoutX="139.0" layoutY="265.0" onAction="#bookvalidaion" prefHeight="49.0" prefWidth="202.0" style="-fx-background-color: #16518c;" text="     Book and Validate" textAlignment="CENTER" textFill="#edeff2">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField fx:id="num" alignment="CENTER" layoutX="195.0" layoutY="79.0" onKeyReleased="#calcil" prefHeight="43.0" prefWidth="89.0" promptText="Number of participants" text="1" unFocusColor="#1f1f1f">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <Text fx:id="name" layoutX="213.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="totalprice" fill="RED" layoutX="196.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="100.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="idexperience" layoutX="37.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <FontAwesomeIconView fx:id="creditCard" fill="RED" glyphName="CREDIT_CARD" layoutX="150.0" layoutY="297.0" size="22" />
+                  <Text fx:id="totalprice1" fill="#cd5f5f" layoutX="132.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of travelers" textAlignment="CENTER" wrappingWidth="226.9999976158142">
+                     <font>
+                        <Font name="System Bold Italic" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="totalprice11" fill="#cd5f5f" layoutX="130.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Price" textAlignment="CENTER" wrappingWidth="226.9999976158142">
+                     <font>
+                        <Font name="System Bold Italic" size="22.0" />
+                     </font>
+                  </Text>
+                  <ProgressIndicator fx:id="progressIndi" layoutX="370.0" layoutY="293.0" prefHeight="84.0" prefWidth="83.0" progress="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="275.0" layoutY="47.0" prefHeight="71.0" prefWidth="435.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Text fill="#ff2828" layoutX="66.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Booking Valdiation" textAlignment="CENTER" wrappingWidth="323.4818115234375">
+                     <font>
+                        <Font name="System Italic" size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1000.0" styleClass="gradient" stylesheets="@Template.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b4.esprit1718b4tourism.app.client.gui.LoginController">
+   <children>
+      <AnchorPane layoutX="55.0" layoutY="68.0" prefHeight="466.0" prefWidth="398.0" style="-fx-background-color: rgb(233, 240, 245); -fx-background-radius: 5;">
+         <children>
+            <Label layoutY="37.0" prefHeight="42.0" prefWidth="325.0" style="-fx-border-width: 0 0 0 4; -fx-border-color: #ff3b9d;" text="SIGN IN" textFill="#ff3b9d">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Label>
+            <GridPane layoutX="71.0" layoutY="101.0" prefHeight="260.0" prefWidth="300.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.20001220703125" minWidth="10.0" prefWidth="121.20001220703125" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.79998779296875" minWidth="10.0" prefWidth="178.79998779296875" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Email" />
+                  <Label text="Password" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="email_in" promptText="email" text="hassentourism@tourism.tn" GridPane.columnIndex="1" />
+                  <JFXPasswordField fx:id="password_in" promptText="password" text="hassentourism" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXCheckBox fx:id="stay_connected" text="Stay connected" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Button id="button1" fx:id="sign_in" layoutX="97.0" layoutY="379.0" mnemonicParsing="false" onAction="#sign_in_action" stylesheets="@Template.css" text="Sign in" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Visitor" layoutX="319.0" layoutY="604.0" onMouseReleased="#Visitor_action" prefHeight="91.0" prefWidth="319.0" styleClass="menus">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="21.0" prefHeight="54.0" prefWidth="266.0" text="LOGIN as visitor" textFill="#d7cdcd">
+               <font>
+                  <Font name="System Italic" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="533.0" layoutY="64.0" prefHeight="459.0" prefWidth="432.0" style="-fx-background-color: rgb(233, 240, 245); -fx-background-radius: 5;">
+         <children>
+            <Label layoutY="37.0" prefHeight="42.0" prefWidth="325.0" style="-fx-border-width: 0 0 0 4; -fx-border-color: #ff3b9d;" text="SIGN UP" textFill="#ff3b9d">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Label>
+            <Button id="button1" fx:id="submit" layoutX="112.0" layoutY="373.0" mnemonicParsing="false" onAction="#submit_action" prefHeight="39.0" prefWidth="155.0" stylesheets="@Template.css" text="submit" />
+            <GridPane layoutX="88.0" layoutY="70.0" prefHeight="243.0" prefWidth="257.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.2000732421875" minWidth="10.0" prefWidth="100.20001220703125" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.79998779296875" minWidth="10.0" prefWidth="157.79998779296875" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="first name" />
+                  <Label text="last name" GridPane.rowIndex="1" />
+                  <Label text="birthday" GridPane.rowIndex="2" />
+                  <Label text="email" GridPane.rowIndex="3" />
+                  <Label text="phone" GridPane.rowIndex="4" />
+                  <JFXTextField fx:id="first_name" GridPane.columnIndex="1" />
+                  <JFXDatePicker fx:id="birthday" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="last_name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="phone" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="596.0" layoutY="49.0" prefHeight="30.0" prefWidth="261.0" style="-fx-background-color: rgb(150, 174, 191); -fx-border-radius: 5; -fx-background-radius: 5;" />
+      <Pane layoutX="124.0" layoutY="53.0" prefHeight="30.0" prefWidth="264.0" style="-fx-background-color: rgb(150, 174, 191); -fx-border-radius: 5; -fx-background-radius: 5;" />
+   </children>
+</AnchorPane>

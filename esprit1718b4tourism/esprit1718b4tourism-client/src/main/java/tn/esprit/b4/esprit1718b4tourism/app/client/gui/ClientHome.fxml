@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b4.esprit1718b4tourism.app.client.gui.ClientHomeController">
+   <children>
+      <Pane prefHeight="749.0" prefWidth="996.0">
+         <children>
+            <ImageView fx:id="imgv" fitHeight="750.0" fitWidth="1000.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../../../git/esprit1718b4tourism/esprit1718b4tourism/esprit1718b4tourism-client/src/main/java/tn/esprit/b4/esprit1718b4tourism/app/client/img/background.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane prefHeight="750.0" prefWidth="997.0">
+         <children>
+            <AnchorPane fx:id="logout_menu" layoutX="774.0" layoutY="578.0" onMouseReleased="#logout_menu_click" prefHeight="60.0" prefWidth="225.0" styleClass="menus" stylesheets="@Template.css">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="15.0" prefHeight="26.0" prefWidth="84.0" text="Logout" textAlignment="CENTER" textFill="#e2d2d2">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="manage_acc_menu" layoutX="734.0" layoutY="497.0" onMouseReleased="#manage_acc_menu_click" prefHeight="60.0" prefWidth="266.0" styleClass="menus" stylesheets="@Template.css">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="63.0" layoutY="15.0" prefHeight="26.0" prefWidth="150.0" text="Manage Accounts" textAlignment="CENTER" textFill="#e2d2d2">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXHamburger fx:id="hamburger" layoutX="896.0" layoutY="51.0" prefHeight="60.0" prefWidth="52.0" />
+            <Label fx:id="logged_as" layoutX="348.0" layoutY="102.0" prefHeight="45.0" prefWidth="295.0" text="logged as">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font></Label>
+            <VBox layoutX="391.0" layoutY="215.0" prefHeight="294.0" prefWidth="255.0">
+               <children>
+                  <RadioButton fx:id="radio1" mnemonicParsing="false" onAction="#radio1_action" text="   Client">
+                     <padding>
+                        <Insets bottom="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="20.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="radio2" mnemonicParsing="false" onAction="#radio2_action" text="   Premuim">
+                     <padding>
+                        <Insets bottom="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="20.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="radio3" mnemonicParsing="false" onAction="#radio3_action" text="   Admin">
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="20.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="400.0" focusTraversable="true" layoutY="175.0" prefHeight="403.0" prefWidth="196.0">
+         <children>
+            <Label fx:id="forumOwner" prefHeight="25.0" prefWidth="173.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <VBox fx:id="box" prefHeight="671.0" prefWidth="235.0">
+               <children>
+                  <JFXButton fx:id="h_hotels" onAction="#h_hotels_action" prefHeight="45.0" prefWidth="237.0" text="Hotels" textFill="#b0b6c6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="h_experiences" onAction="#h_experiences_click" prefHeight="48.0" prefWidth="237.0" text="Experiences" textFill="#b0b6c6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="h_event" onAction="#h_event_click" prefHeight="51.0" prefWidth="238.0" text="Events" textFill="#b0b6c6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="h_articles" onAction="#h_articles_click" prefHeight="46.0" prefWidth="239.0" text="Articles" textFill="#b0b6c6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="h_restaurants" onAction="#h_restaurants_click" prefHeight="38.0" prefWidth="239.0" text="Restautants" textFill="#b0b6c6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="chatroom" onAction="#h_chat" prefHeight="49.0" prefWidth="240.0" text="Chat Room" textFill="#b0b6c6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="profile" onAction="#h_profile" prefHeight="49.0" prefWidth="237.0" text="Profile" textFill="#b0b6c6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="contact" onAction="#h_contact" prefHeight="49.0" prefWidth="237.0" text="Contact" textFill="#b0b6c6">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </JFXDrawer>
+   </children>
+   <WebView fx:id="webview" layoutX="299.0" layoutY="488.0" prefHeight="190.0" prefWidth="320.0" />
+</AnchorPane>

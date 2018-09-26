@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.b4.esprit1718b4tourism.app.client.gui.SearchController">
+   <children>
+      <Pane prefHeight="603.0" prefWidth="1006.0">
+         <children>
+            <ImageView fitHeight="641.0" fitWidth="1002.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/azuz/Desktop/events/background.png" />
+               </image>
+            </ImageView>
+            <JFXHamburger fx:id="hamburger" layoutX="939.0" layoutY="14.0" />
+            <TableView fx:id="tableaffichage" layoutX="126.0" layoutY="102.0" prefHeight="227.0" prefWidth="787.0">
+              <columns>
+                  <TableColumn fx:id="colonetitre" prefWidth="124.0" text="Title" />
+                <TableColumn fx:id="coloneadress" prefWidth="125.0" text="adresse" />
+                <TableColumn fx:id="colonedescription" prefWidth="152.0" text="description" />
+                  <TableColumn fx:id="colonedebut" prefWidth="93.0" text="begining date" />
+                  <TableColumn fx:id="colonefin" prefWidth="86.0" text="ending date" />
+                  <TableColumn fx:id="colonePlaces" prefWidth="130.0" text="Number of places" />
+                  <TableColumn fx:id="colonePrice" prefWidth="76.0" text="Price" />
+              </columns>
+            </TableView>
+           
+           
+           
+            <JFXButton fx:id="boutonsearch" layoutX="173.0" layoutY="476.0" onAction="#search" prefHeight="30.0" prefWidth="122.0" ripplerFill="#d3e3ff" style="-fx-background-color: #16518c;" text="Search" textFill="#dae7ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="erreur" layoutX="545.0" layoutY="612.0" prefHeight="17.0" prefWidth="149.0" textFill="#da1010">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="pricemin" layoutX="150.0" layoutY="365.0" promptText="Price min" unFocusColor="#64ae19">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <ComboBox fx:id="typeEvent" layoutX="434.0" layoutY="367.0" prefWidth="150.0" promptText="Music" />
+            <JFXTextField fx:id="pricemax" layoutX="150.0" layoutY="423.0" promptText="Price max" unFocusColor="#64ae19">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="boutonsearch1" layoutX="756.0" layoutY="547.0" onAction="#searchDate" prefHeight="30.0" prefWidth="122.0" ripplerFill="#d3e3ff" style="-fx-background-color: #16518c;" text="Search" textFill="#dae7ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="sort" layoutX="25.0" layoutY="52.0" onAction="#sortHere" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #16518c;" text="Sort Here" textFill="#d3e3ff" />
+            <JFXButton fx:id="what" layoutX="416.0" layoutY="476.0" onAction="#whatdo" prefHeight="30.0" prefWidth="171.0" ripplerFill="#d3e3ff" style="-fx-background-color: #16518c;" text="What do you Prefer ?" textFill="#dae7ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="back" layoutX="25.0" layoutY="21.0" onAction="#backup" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #16518c;" text="Back" textFill="#d3e3ff">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXTextField fx:id="searchForum" layoutX="404.0" layoutY="30.0" maxWidth="312.0" minWidth="312.0" onKeyTyped="#Search" prefHeight="45.0" prefWidth="312.0" promptText="Search" unFocusColor="#b2d01a">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="priceee" layoutX="733.0" layoutY="485.0" promptText="Price" unFocusColor="#64ae19">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="adress" layoutX="733.0" layoutY="423.0" promptText="Address" unFocusColor="#64ae19">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="name" layoutX="733.0" layoutY="353.0" promptText="Name" unFocusColor="#64ae19">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+           
+         </children>
+      </Pane>
+     
+   </children>
+</AnchorPane>
